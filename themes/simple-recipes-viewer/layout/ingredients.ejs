@@ -9,7 +9,8 @@
   <div class="page-body"><%
     var ingredients = site.pages.filter( p => p.layout === 'ingredient' )
       .sort( 'name' ),
-      recipes = site.pages.filter( p => p.layout === 'recipe' );
+      recipes = site.pages.filter( p => p.layout === 'recipe' ),
+      maxRecipes = 0;
 
     ingredients.forEach( ingr => {
       var totalRecipes = 0,
@@ -24,6 +25,7 @@
       });
       ingr.totalRecipes = totalRecipes;
       ingr.totalRatio = totalRatio;
+      maxRecipes = Math.max( maxRecipes, totalRecipes );
     });
     ingredients.data.sort( ( a, b ) => {
       if ( a.totalRecipes !== b.totalRecipes ) {
@@ -33,9 +35,9 @@
       }
     });
   %>
-    <ul class="menu3cols"><%
+    <ul class="menucloud"><%
     ingredients.forEach( ingr => { %>
-      <li><h3><a href="/<%- ingr.path %>" class="btn btn-main"><%- ingr.name %></a></h3></li><%
+      <li><h3><a href="/<%- ingr.path %>" class="btn btn-main" style="--btnsize: <%- Math.round( ( 1 + ingr.totalRecipes/maxRecipes ) * 100 ) / 100 %>rem"><%- ingr.name %></a></h3></li><%
     }) %>
     </ul>
   </div>

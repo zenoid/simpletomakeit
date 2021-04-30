@@ -137,16 +137,28 @@ body.touch {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.menu3cols {
-  column-count: 3;
-  column-gap: 1rem;
+.menucloud {
+  @include flex;
+  @include flexWrap;
+  @include flexBottom;
 
-  @media only screen and (max-width: $size-S) {
-    column-count: 2;
-  }
+  li {
+    --btnsize: 1rem;
+    margin: 0 0.75rem 0.75rem 0;
 
-  @media only screen and (max-width: $size-XXS) {
-    column-count: 1;
+    .btn-main {
+      font-size: var( --btnsize );
+      margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: $size-XS) {
+      margin: 0 0.5rem 0.5rem 0;
+    }
+
+    @media only screen and (max-width: $size-XXS) {
+      width: 100%;
+      margin: 0 0 2px 0;
+    }
   }
 }
 
