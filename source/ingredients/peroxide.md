@@ -3,7 +3,7 @@
 layout: ingredient
 
 id: peroxide
-permalink: acqua-ossigenata
+permalink: ingrediente/acqua-ossigenata
 name: "Acqua ossigenata"
 altNames: "Perossido di idrogeno"
 inci: "Hydrogen Peroxide"

@@ -3,7 +3,7 @@
 layout: ingredient
 
 id: citricacid
-permalink: acido-citrico
+permalink: ingrediente/acido-citrico
 name: "Acido citrico"
 inci: "Citric Acid"
 unitWeight: 1.665

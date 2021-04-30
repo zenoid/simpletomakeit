@@ -3,7 +3,7 @@
 layout: ingredient
 
 id: starch
-permalink: amido
+permalink: ingrediente/amido
 name: "Amido"
 altNames: "Maizena o Fecola o Frumina"
 inci: "Zea Mays Starch o Tapioca Starch"

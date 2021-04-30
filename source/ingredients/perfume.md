@@ -3,7 +3,7 @@
 layout: ingredient
 
 id: perfume
-permalink: oli-essenziali
+permalink: ingrediente/oli-essenziali
 name: "Oli essenziali"
 inci: "Parfum"
 

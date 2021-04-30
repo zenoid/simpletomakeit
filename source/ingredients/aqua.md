@@ -3,7 +3,7 @@
 layout: ingredient
 
 id: aqua
-permalink: acqua
+permalink: ingrediente/acqua
 name: "Acqua"
 inci: "aqua"
 unitWeight: 1

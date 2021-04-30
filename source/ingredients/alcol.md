@@ -3,7 +3,7 @@
 layout: ingredient
 
 id: alcol
-permalink: alcool-etilico
+permalink: ingrediente/alcool-etilico
 categories:
 - [ingredient]
 name: "Alcool etilico"

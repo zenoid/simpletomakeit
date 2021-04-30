@@ -3,7 +3,7 @@
 layout: ingredient
 
 id: bakingsoda
-permalink: bicarbonato
+permalink: ingrediente/bicarbonato
 name: "Bicarbonato"
 altNames: "Carbonato acido di sodio o Carbonato monosodico"
 inci: "Sodium Bicarbonate"
