@@ -11,26 +11,37 @@
       "recipeCategory": "<%- page.category %>",
       "keywords": "<%- __('keywords') %>",
       "description": "<% for ( i = 0; i < page.principles.length; i++ ) { %><%- page.principles[ i ] %>. <% } %>",
-      "recipeIngredient": [<%
-        var ingrSchema = [];
+      "recipeIngredient": [
+        <%
+
+        var ingredients = [];
+
         for ( i = 0; i < page.ingredients.length; i++ ) {
-          if ( page.ingredients[ i ].name ) {
-            ingrSchema.push( page.ingredients[ i ] );
+          ingredients.push({
+            id: page.ingredients[ i ].id,
+            name: page.ingredients[ i ].name,
+            qty: +page.ingredients[ i ].qty,
+            units: page.ingredients[ i ].units
+          })
+          var ingredientDataSource = site.pages.filter( p => {
+            return ( p.layout === 'ingredient' ) && ( p.id === page.ingredients[ i ].id );
+          })
+          if ( ingredientDataSource.length ) {
+            ingredients[i].name = ingredientDataSource.data[0].name;
           }
         }
-        for ( i = 0; i < ingrSchema.length; i++ ) { %>
-        "<% if ( ingrSchema[ i ].qty ) { %><%- ingrSchema[ i ].qty %> <%- ingrSchema[ i ].units %> <% } %><%- ingrSchema[ i ].name %>"<% if ( i < ingrSchema.length - 1 ) { %>, <% } %><% } %>
+
+        ingredients.forEach( (ing, i) => {
+          if ( ing.name ) {
+            %>"<% if ( ing.qty ) { %><%- ing.qty %> <%- ing.units %> <% } %><%- ing.name %>"<% if ( i < ingredients.length - 1 ) { %>, <% } %><%
+          }
+        }) %>
       ],
       "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "89"
+        "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "<%- 100 +page.directions.length*13 %>"
       },
       "recipeInstructions": [<% for ( i = 0; i < page.directions.length; i++ ) { %>
-        {
-          "@type": "HowToStep",
-          "text": "<%- page.directions[ i ] %>"
-        }<% if ( i < page.directions.length - 1 ) { %>, <% } %><% } %>
+        { "@type": "HowToStep", "text": "<%- page.directions[ i ] %>" }<% if ( i < page.directions.length - 1 ) { %>, <% } %><% } %>
       ]
     }
   </script>
