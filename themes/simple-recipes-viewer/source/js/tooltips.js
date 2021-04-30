@@ -13,18 +13,22 @@ document.addEventListener( 'DOMContentLoaded', function() {
     tooltip.classList.add( 'tooltip' );
     tooltip.innerHTML = this.dataset.tooltip;
     document.body.appendChild( tooltip );
-    let elemRect = this.getBoundingClientRect(),
-      tooltipRect = tooltip.getBoundingClientRect(),
-      top = elemRect.top + ( elemRect.height - tooltipRect.height ) / 2,
-      left = elemRect.left - tooltipRect.width + 4;
-    if ( left < 0 ) {
-      left = elemRect.right - 4;
+    window.addEventListener( 'mousemove', followTooltip );
+  }
+
+  function followTooltip( e ) {
+    let tooltip = document.querySelector( '.tooltip' );
+    let l = e.pageX + 4,
+      box = tooltip.getBoundingClientRect();
+    if (l + box.width >= window.innerWidth - 4) {
+      l = e.pageX - 4 - box.width;
     }
-    tooltip.style.top = top + 'px';
-    tooltip.style.left = left + 'px';
+    tooltip.style.top = e.pageY + 12 + "px"
+    tooltip.style.left = l + "px";
   }
 
   function onTooltipLeave() {
+    window.removeEventListener( 'mousemove', followTooltip );
     Array.from( document.querySelectorAll( '.tooltip' ) ).forEach( t => {
       document.body.removeChild( t );
     })
