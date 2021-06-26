@@ -31,19 +31,19 @@ recipeRange: [ 500, 5000, 100 ]
 
 ingredients:
   - { id: "alcol",
-      ratio: 33.5,
-      qty: 340,
+      ratio: 33.3,
+      qty: 330,
       units: "gr" }
   - { id: "sugar",
-      ratio: 24.1,
-      qty: 240,
+      ratio: 22.2,
+      qty: 220,
       units: "gr",
-      notes: "Con queste dosi, otterrai un liquore abbastanza dolce. Il peso dello zucchero può variare tra il 15% e il 30% sul totale." }
+      notes: "Con queste dosi, otterrai un liquore di media dolcezza. Aumenta il peso dello zucchero di un 30% per un liquore dolce, o diminuiscilo del 30% se lo preferisci molto amaro." }
   - { id: "aqua",
-      ratio: 42.4,
-      qty: 420,
+      ratio: 44.5,
+      qty: 440,
       units: "gr",
-      notes: "Se ti è più semplice, puoi anche dosare a volume: usa un volume di acqua pari a quello dell'alcool. Metti più acqua per un liquore meno forte, o viceversa." }
+      notes: "Puoi anche misurare tutto a volume: usando <strong>1 dose di alcool, 1 dose di acqua e 1/2 dose di zucchero</strong>, otterrai un liquore al 38%." }
   - { id: "herbs",
       name: "Erbe, bacche o agrumi",
       notes: "Gli ingredienti più utilizzati sono erbe (<strong>alloro, rosmarino, menta, genziana</strong>), fiori eduli (<strong>rosa, carciofo, sambuco</strong>), bucce di agrumi (<strong>limone, mandarino, arancia</strong>), bacche o noccioli (<strong>malli di noce, ginepro, mirto, armelline, chicchi di caffè</strong>)." }

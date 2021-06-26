@@ -10,6 +10,15 @@
     
     
     <url>
+        <loc>https://simpletomake.it/liquore.html</loc>
+        <lastmod>2021-06-26T08:39:18.711Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    
+    
+    <url>
         <loc>https://simpletomake.it/gingerbeer.html</loc>
         <lastmod>2021-04-30T14:57:21.012Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -192,15 +201,6 @@
     <url>
         <loc>https://simpletomake.it/ingrediente/olio-mandorle.html</loc>
         <lastmod>2021-04-30T09:03:57.005Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://simpletomake.it/liquore.html</loc>
-        <lastmod>2021-03-09T07:43:28.705Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
